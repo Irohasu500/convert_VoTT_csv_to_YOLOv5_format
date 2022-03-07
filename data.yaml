@@ -1,0 +1,5 @@
+train: ./data/train/images 
+val: ./data/valid
+
+nc: 7
+names: ['person', 'girl', 'boy', 'office_worker', 'man', 'student', 'dog']

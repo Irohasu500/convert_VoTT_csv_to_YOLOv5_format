@@ -22,6 +22,9 @@ train_image_path = "./data/train/images"
 # (出力先) ラベル
 train_label_data_path = "./data/train/labels"
 
+# 検証用画像
+valid_image_path = "./data/valid"
+
 ########################## メタ情報　###############################
 
 class_num:int = 0
@@ -72,6 +75,18 @@ def images_copy(images_folder_path:str,image_out_path:str):
         subprocess.run(command,shell=True)
     os.chdir(default_path)
 
+def gen_data_yaml(train_image_path:str,valid_image_path:str,label_name_list:list):
+    label_num = len(label_name_list)
+    default_path = os.getcwd()
+    out_str =   f"train: {train_image_path} \n" + \
+                f"val: {valid_image_path}\n" + \
+                f"\n" + \
+                f"nc: {label_num}\n" + \
+                f"names: {label_name_list}"
+    with open("./data.yaml" , "w") as wf:
+        wf.write(out_str)
+    os.chdir(default_path)
+
 ########################## func ################################
 
 if __name__ == "__main__":
@@ -95,3 +110,6 @@ if __name__ == "__main__":
 
     # 画像を全てコピー
     images_copy(image_folder_path,train_image_path)
+
+    # 最後にdata.yamlを生成。
+    gen_data_yaml(train_image_path,valid_image_path,label_name_list)

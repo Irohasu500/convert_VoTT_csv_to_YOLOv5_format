@@ -1,8 +1,16 @@
 # VoTT(csv) to folders for YOLO
 
+## テスト済み動作環境
+windows10で動作  
+Python 3.8.5  
+
+macOSやUbuntu、その他の方はsubprocess.runメソッドの実行部分の  
+copyコマンドなどを各OSに合わせて実行してみてください。  
+
 ## このプログラムの機能
 VoTTから出力されるアノテーション付き画像データを
-YOLOで学習できるフォルダ形式に変換します。
+YOLOで学習できるフォルダ形式に変換します。  
+**data.yaml**も出力します。
 
 ## 使用方法
 set_label_txt.pyの上部にある下記のメタ変数を埋めて実行してください。
@@ -38,12 +46,3 @@ set_label_txt.pyの上部にある下記のメタ変数を埋めて実行して�
 4,man  
 5,student  
 6,dog  
-
-***
-
-## 追伸
-windows10で動作  
-Python 3.8.5  
-
-macOSやUbuntu、その他の方はsubprocess.runメソッドの実行部分の  
-copyコマンドなどを各OSに合わせて実行してみてください。  
