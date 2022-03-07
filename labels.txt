@@ -1,0 +1,7 @@
+0,person
+1,girl
+2,boy
+3,office_worker
+4,man
+5,student
+6,dog
