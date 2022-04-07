@@ -1,0 +1,16 @@
+0,label
+1,tv
+2,child
+3,plant
+4,camera_poll
+5,cardboard
+6,bag
+7,cloth
+8,color_box
+9,slipper
+10,TV
+11,door
+12,carry_case
+13,camera
+14,stepladder
+15,robot
